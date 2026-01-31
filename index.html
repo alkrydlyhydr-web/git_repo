@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو أسد | Abu Asad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FontAwesome -->
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Luxury Preloader -->
+    <div id="preloader">
+        <div class="loader-logo">أبو حسين</div>
+        <div class="loader-line"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">أبو حسين <span>.VIP</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><button id="loginBtn" class="btn-primary btn-pulse">دخول الأعضاء</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content reveal" data-scroll>
+                <h1 class="glitch" data-text="أبو حسين">أبو حسين</h1>
+                <p class="subtitle"><span id="typing-text"></span><span class="cursor-blink">|</span></p>
+                <div class="cta-group">
+                    <a href="#services" class="btn-glow btn-pulse">أكتشف المزيد</a>
+                    <button class="btn-glow" onclick="document.getElementById('loginBtn').click()"
+                        style="margin-right: 1rem; border-color: #fff; color: #fff;">ابدأ الرحلة</button>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="lion-shape"></div>
+            </div>
+        </section>
+
+        <section id="services" class="services reveal">
+            <h2 class="section-title">خدمات خيالية</h2>
+            <div class="cards-container">
+                <div class="card" data-tilt>
+                    <div class="card-icon">🦁</div>
+                    <h3>تصميم ملكي</h3>
+                    <p>تصاميم تليق بملك الغابة، فخامة لا تضاهى.</p>
+                </div>
+                <div class="card" data-tilt>
+                    <div class="card-icon">⚡</div>
+                    <h3>سرعة خارقة</h3>
+                    <p>أداء فائق السرعة وتجاوب لحظي.</p>
+                </div>
+                <div class="card" data-tilt>
+                    <div class="card-icon">💎</div>
+                    <h3>جودة عالمية</h3>
+                    <p>أدق التفاصيل مصنوعة بحرفية عالية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section reveal">
+            <div class="quote-container">
+                <blockquote>"التميز ليس فعلاً، بل هو عادة."</blockquote>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery reveal">
+            <h2 class="section-title">معرض الإبداع</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item item1">
+                    <div class="overlay">
+                        <h3>مشروع الفخامة</h3>
+                        <p>تصميم واجهة</p>
+                    </div>
+                </div>
+                <div class="gallery-item item2">
+                    <div class="overlay">
+                        <h3>هوية بصرية</h3>
+                        <p>شعار</p>
+                    </div>
+                </div>
+                <div class="gallery-item item3">
+                    <div class="overlay">
+                        <h3>إبداع ذهبي</h3>
+                        <p>جرافيك</p>
+                    </div>
+                </div>
+                <div class="gallery-item item4">
+                    <div class="overlay">
+                        <h3>لمسة احترافية</h3>
+                        <p>تطوير</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact reveal">
+            <h2 class="section-title">تواصل مع الفخامة</h2>
+            <form class="contact-form">
+                <div class="input-container">
+                    <input type="text" required>
+                    <label>الاسم الكامل</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" required>
+                    <label>البريد الإلكتروني</label>
+                </div>
+                <div class="input-container">
+                    <textarea required></textarea>
+                    <label>رسالتك</label>
+                </div>
+                <button type="submit" class="btn-glow btn-pulse">إرسال الرسالة</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>بوابة الدخول</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>اسم المستخدم</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>كلمة المرور</label>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 أبو حسين حيدر حيدر | تصميم <a href="#" class="designer-link">علي حيدر</a></p>
+    </footer>
+
+    <!-- Floating Social Bar -->
+    <div class="social-bar">
+        <a href="#" class="magnetic"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="magnetic"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="magnetic"><i class="fab fa-snapchat"></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
